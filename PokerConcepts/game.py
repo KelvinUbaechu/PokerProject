@@ -248,14 +248,14 @@ class Game:
 
 		#Initializes computer players
 		for _ in range(self.NUM_OF_PLAYERS - 1):
-			name = f'Player {len(self.players) + 1}'
+			name = f'Computer {len(self.players) + 1}'
 			discarder = random.choice(self.DISCARDERS)
 
 			player = Player(name=name, discarder=discarder)
 			self.players.append(player)
 
 		#Initializes the human player
-		user = Player(name=enter_name(), discarder=USER_DISCARDER)
+		user = Player(name=enter_name() or 'Human', discarder=USER_DISCARDER)
 		self.players.append(user)
 
 	def initialize_deck(self) -> None:
