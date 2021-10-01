@@ -247,8 +247,8 @@ class Game:
 		self.players = []
 
 		#Initializes computer players
-		for _ in range(self.NUM_OF_PLAYERS - 1):
-			name = f'Computer {len(self.players) + 1}'
+		for i in range(self.NUM_OF_PLAYERS - 1):
+			name = f'Computer {i + 1}'
 			discarder = random.choice(self.DISCARDERS)
 
 			player = Player(name=name, discarder=discarder)
